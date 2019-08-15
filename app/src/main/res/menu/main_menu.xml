@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+            android:checkableBehavior="single">
+        <item
+                android:title="@string/caption_sort">
+            <menu>
+                <group
+                        android:checkableBehavior="single">
+                    <item
+                            android:id="@+id/nav_sort_by_default"
+                            android:title="@string/action_sort_by_default"
+                            android:checkable="true"/>
+
+                    <item
+                            android:id="@+id/nav_sort_by_name"
+                            android:title="@string/action_sort_by_name"
+                            android:checkable="true"/>
+                    <item
+                            android:id="@+id/nav_sort_by_date"
+                            android:title="@string/action_sort_by_date"
+                            android:checkable="true"/>
+                </group>
+            </menu>
+        </item>
+    </group>
+    <group
+            android:checkableBehavior="none">
+        <item
+                android:id="@+id/nav_clear_all"
+                android:title="@string/action_clear"/>
+    </group>
+</menu>

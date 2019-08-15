@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="@dimen/dimen_common_small"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="@dimen/dimen_common_small"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:focusable="true">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:id="@+id/img_card_1"
+                        android:src="@drawable/material_design_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription"/>
+
+                <TextView
+                        android:id="@+id/tv_card_1_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_card_1"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:text="@string/main_card_title"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"/>
+
+                <TextView
+                        android:id="@+id/tv_card_1_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_card_1_title"
+                        android:layout_marginStart="@dimen/dimen_common"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common"
+                        android:text="@string/main_card_subtitle"
+                        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"/>
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_card_1_action1"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_card_1_subtitle"
+                        android:layout_margin="@dimen/dimen_common_small"
+                        android:text="@string/main_card_button_1"/>
+
+                <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_card_1_subtitle"
+                        android:layout_marginTop="@dimen/dimen_common_small"
+                        android:layout_marginBottom="@dimen/dimen_common_small"
+                        android:layout_toEndOf="@id/btn_card_1_action1"
+                        android:text="@string/main_card_button_2"/>
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="@dimen/dimen_common_small"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="@dimen/dimen_common_small"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:strokeColor="@color/colorAccent"
+                app:strokeWidth="2dp"
+                android:focusable="true">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv_card_3_title"
+                        style="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_common"
+                        android:text="@string/main_card_with_stroke_title"/>
+
+                <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_card_3_action_1"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/tv_card_3_title"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common_medium"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/main_card_button_2"
+                        android:textColor="@color/white"
+                        android:focusable="true"/>
+
+                <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/tv_card_3_title"
+                        android:layout_marginTop="@dimen/dimen_common"
+                        android:layout_marginEnd="@dimen/dimen_common"
+                        android:layout_marginBottom="@dimen/dimen_common_medium"
+                        android:layout_toStartOf="@id/btn_card_3_action_1"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/main_card_button_1"
+                        android:focusable="true"/>
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_common"
+                android:layout_marginTop="@dimen/dimen_common_small"
+                android:layout_marginEnd="@dimen/dimen_common"
+                android:layout_marginBottom="@dimen/dimen_common_small"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:focusable="true">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:id="@+id/img_card_2"
+                        android:src="@drawable/material_design_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        tools:ignore="ContentDescription"/>
+
+                <TextView
+                        style="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/img_card_2"
+                        android:layout_margin="@dimen/dimen_common"
+                        android:text="@string/main_card_title"
+                        android:textColor="@color/white"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/img_card_2"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dimen_common_small">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="@dimen/dimen_common_small"
+                            android:src="@drawable/ic_favorite_border_white_24dp"
+                            android:tint="@color/gray_deep"
+                            android:focusable="true"
+                            tools:ignore="ContentDescription"/>
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="@dimen/dimen_common_small"
+                            android:src="@drawable/ic_bookmark_border_white_24dp"
+                            android:tint="@color/gray_deep"
+                            android:focusable="true"
+                            tools:ignore="ContentDescription"/>
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:padding="@dimen/dimen_common_small"
+                            android:src="@drawable/ic_share_white_24dp"
+                            android:tint="@color/gray_deep"
+                            android:focusable="true"
+                            tools:ignore="ContentDescription"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/dimen_common"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/dimen_common">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:text="@string/main_widget_chip"
+                android:textColor="@color/colorPrimary"/>
+
+        <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_common"
+                app:chipSpacing="16dp"
+                app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:text="Checkable"
+                    app:chipBackgroundColor="@color/colorAccent"
+                    android:focusable="true"/>
+
+            <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:text="Filter Chip"
+                    android:focusable="true"/>
+
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:text="Corner Radius"
+                    app:checkedIconVisible="false"
+                    app:chipCornerRadius="4dp"
+                    android:focusable="true"/>
+
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:text="Stroke"
+                    app:chipStrokeColor="@color/colorAccent"
+                    app:chipStrokeWidth="2dp"
+                    android:focusable="true"/>
+
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="Chip Icon"
+                    app:chipIcon="@drawable/ic_photo_white_24dp"
+                    app:chipIconEnabled="true"
+                    app:chipIconTint="@color/gray_deep"
+                    app:iconStartPadding="8dp"
+                    app:rippleColor="@color/colorAccent"
+                    android:focusable="true"/>
+
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="Close Icon"
+                    app:closeIconEnabled="true"
+                    app:rippleColor="@color/colorAccent"
+                    android:focusable="true"/>
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

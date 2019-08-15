@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item
+                android:id="@+id/nav_buttons"
+                android:icon="@drawable/ic_android_black_24dp"
+                android:title="@string/action_material_button" />
+        <item
+                android:id="@+id/nav_cards"
+                android:icon="@drawable/ic_android_black_24dp"
+                android:title="@string/action_cards" />
+        <item
+                android:id="@+id/nav_chips"
+                android:icon="@drawable/ic_android_black_24dp"
+                android:title="@string/action_chips" />
+        <item
+                android:id="@+id/nav_progress_indicators"
+                android:icon="@drawable/ic_android_black_24dp"
+                android:title="@string/action_progress_indicators" />
+        <item
+                android:id="@+id/nav_selection_controls"
+                android:icon="@drawable/ic_android_black_24dp"
+                android:title="@string/action_selection_controls" />
+        <item
+                android:id="@+id/nav_text_fields"
+                android:icon="@drawable/ic_android_black_24dp"
+                android:title="@string/action_text_fields" />
+        <item
+                android:id="@+id/nav_snackbar"
+                android:icon="@drawable/ic_help_black_24dp"
+                android:title="@string/action_snackbar" />
+    </group>
+</menu>

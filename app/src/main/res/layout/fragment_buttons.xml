@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/dimen_common"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/dimen_common">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/main_widget_material_button"
+                android:textColor="@color/colorPrimary"/>
+
+        <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/main_widget_material_button_unelevated"
+                android:textColor="@color/white"
+                app:rippleColor="@color/color_ripple"
+                android:focusable="true"/>
+
+        <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/main_widget_material_button_icon"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_photo_white_24dp"
+                app:rippleColor="@color/color_ripple"
+                android:focusable="true"/>
+
+        <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:clickable="true"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/main_widget_material_button_default"
+                android:textColor="@color/white"
+                app:cornerRadius="20dp"
+                app:rippleColor="@color/color_ripple"
+                android:focusable="true"/>
+
+        <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/main_widget_material_button_text"
+                android:focusable="true"/>
+
+        <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/main_widget_material_button_outline"
+                android:focusable="true"/>
+
+        <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="@dimen/dimen_common"
+                android:clickable="true"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/main_widget_material_button_stroke"
+                android:textColor="@color/white"
+                app:rippleColor="@color/color_ripple"
+                app:strokeColor="@color/colorAccent"
+                app:strokeWidth="2dp"
+                android:focusable="true"/>
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_common"/>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="@dimen/dimen_common">
+
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_common"
+                    android:clickable="true"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="A"
+                    app:strokeColor="@color/gray"
+                    app:strokeWidth="1dp"
+                    android:focusable="true"/>
+
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_common"
+                    android:clickable="true"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="B"
+                    app:strokeColor="@color/gray"
+                    app:strokeWidth="1dp"
+                    android:focusable="true"/>
+
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_common"
+                    android:clickable="true"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="C"
+                    app:strokeColor="@color/gray"
+                    app:strokeWidth="1dp"
+                    android:focusable="true"/>
+
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_common"
+                    android:clickable="true"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="D"
+                    app:strokeColor="@color/gray"
+                    app:strokeWidth="1dp"
+                    android:focusable="true"/>
+
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen_common"
+                    android:clickable="true"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="E"
+                    app:strokeColor="@color/gray"
+                    app:strokeWidth="1dp"
+                    android:focusable="true"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
