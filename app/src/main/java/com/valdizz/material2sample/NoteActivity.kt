@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.behavior.HideBottomViewOnScrollBehavior
 import com.google.android.material.bottomappbar.BottomAppBar
 import com.valdizz.material2sample.fragment.NotesFragment
 import com.valdizz.material2sample.listener.BottomAppBarStateListener
@@ -25,14 +26,20 @@ class NoteActivity : AppCompatActivity(), BottomAppBarStateListener {
         initBottomAppBar()
         initFab()
         noteViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
-        loadFragment(NotesFragment.newInstance(), NotesFragment.TAG)
+        if (savedInstanceState == null) {
+            loadFragment(NotesFragment.newInstance(), NotesFragment.TAG)
+        } else {
+            if (supportFragmentManager.findFragmentById(R.id.fragment_container)?.tag != NotesFragment.TAG) {
+                setSecondState()
+            }
+        }
     }
 
     //Set up bottom bar
     private fun initBottomAppBar() {
         setSupportActionBar(bottomAppBar)
         bottomAppBar.replaceMenu(R.menu.bottomappbar_menu)
-        bottomAppBar.setNavigationOnClickListener{
+        bottomAppBar.setNavigationOnClickListener {
             val navigationMenuModalSheet = NavigationMenuModalSheet.newInstance()
             navigationMenuModalSheet.show(supportFragmentManager, NavigationMenuModalSheet.TAG)
         }
@@ -63,7 +70,9 @@ class NoteActivity : AppCompatActivity(), BottomAppBarStateListener {
 
     //Inflate menu to bottom bar
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.bottomappbar_menu, menu)
+        if (supportFragmentManager.findFragmentById(R.id.fragment_container)?.tag == NotesFragment.TAG) {
+            menuInflater.inflate(R.menu.bottomappbar_menu, menu)
+        }
         return true
     }
 
@@ -87,13 +96,18 @@ class NoteActivity : AppCompatActivity(), BottomAppBarStateListener {
     override fun setMainState() {
         bottomAppBar.navigationIcon = ContextCompat.getDrawable(this@NoteActivity, R.drawable.ic_menu_white_24dp)
         bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_CENTER
-        onCreateOptionsMenu(bottomAppBar.menu)
-        fab.setImageResource(R.drawable.ic_add_white_24dp)    }
+        menuInflater.inflate(R.menu.bottomappbar_menu, bottomAppBar.menu)
+        fab.setImageResource(R.drawable.ic_add_white_24dp)
+        val bottomAppBarBehavior = bottomAppBar.behavior as HideBottomViewOnScrollBehavior<BottomAppBar>
+        bottomAppBarBehavior.slideUp(bottomAppBar)
+    }
 
     override fun setSecondState() {
         bottomAppBar.navigationIcon = null
         bottomAppBar.fabAlignmentMode = BottomAppBar.FAB_ALIGNMENT_MODE_END
         bottomAppBar.menu.clear()
         fab.setImageResource(R.drawable.ic_reply_black_24dp)
+        val bottomAppBarBehavior = bottomAppBar.behavior as HideBottomViewOnScrollBehavior<BottomAppBar>
+        bottomAppBarBehavior.slideUp(bottomAppBar)
     }
 }
